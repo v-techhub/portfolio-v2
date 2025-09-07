@@ -4,7 +4,7 @@ import { HomeIcon } from "lucide-react";
 export const DATA = {
   name: "Victor Adeshina",
   initials: "VA",
-  url: "https://google.com",
+  url: "https://victor-adeshina.vercel.app",
   location: "Lagos Nigeria",
   locationLink:
     "https://www.google.com/maps/place/Alimosho,+Ipaja+South+102213,+Lagos",
@@ -73,7 +73,7 @@ export const DATA = {
   work: [
     {
       company: "Lotus Beta Analytics",
-      href: "https://www.lotusbetaanalytics.com/",
+      href: "https://www.lotusbetaanalytics.com",
       badges: [],
       location: "Remote",
       title: "Business Solution and Application Developer",
@@ -132,12 +132,12 @@ export const DATA = {
       links: [
         {
           type: "Website",
-          href: "https://llm.report",
+          href: "https://victor-adeshina.vercel.app",
           icon: <Icons.globe className="size-3" />,
         },
         {
           type: "Source",
-          href: "https://github.com/dillionverma/llm.report",
+          href: "https://github.com/v-techhub",
           icon: <Icons.github className="size-3" />,
         },
       ],
