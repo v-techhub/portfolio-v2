@@ -20,15 +20,20 @@ export default function Navbar() {
           <DockIcon key={item.href}>
             <Tooltip>
               <TooltipTrigger asChild>
-                <Link
+                <a
                   href={item.href}
                   className={cn(
                     buttonVariants({ variant: "ghost", size: "icon" }),
                     "size-12"
                   )}
+                  download={
+                    item.label === "Résumé"
+                      ? "Victor-Adeshina-Resume.pdf"
+                      : undefined
+                  }
                 >
                   <item.icon className="size-4" />
-                </Link>
+                </a>
               </TooltipTrigger>
               <TooltipContent>
                 <p>{item.label}</p>

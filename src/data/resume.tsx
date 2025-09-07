@@ -1,5 +1,5 @@
 import { Icons } from "@/components/icons";
-import { HomeIcon } from "lucide-react";
+import { FolderKey, HomeIcon } from "lucide-react";
 
 export const DATA = {
   name: "Victor Adeshina",
@@ -34,6 +34,7 @@ export const DATA = {
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
+    { href: "/victor-cv.pdf", icon: FolderKey, label: "Résumé" },
     // { href: "/blog", icon: NotebookIcon, label: "Blog" },
   ],
   contact: {
