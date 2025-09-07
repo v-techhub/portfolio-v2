@@ -1,17 +1,18 @@
 import { Icons } from "@/components/icons";
-import { HomeIcon, NotebookIcon } from "lucide-react";
+import { HomeIcon } from "lucide-react";
 
 export const DATA = {
   name: "Victor Adeshina",
   initials: "VA",
-  url: "https://dillion.io",
+  url: "https://google.com",
   location: "Lagos Nigeria",
-  locationLink: "https://www.google.com/maps/place/sanfrancisco",
+  locationLink:
+    "https://www.google.com/maps/place/Alimosho,+Ipaja+South+102213,+Lagos",
   description:
     "Software Engineer • Web Developer • Mobile App Developer • Aspiring Full Stack Engineer",
   summary:
     "Software Engineer with 3+ years of experience in developing scalable software solutions. Expertise in full-stack development, specializing in developing dynamic, user-friendly, and scalable web and mobile applications. Skilled in crafting seamless user experiences and experienced in building business applications that streamline workflows and drive efficiency.",
-  avatarUrl: "/victor1.jpg",
+  avatarUrl: "/me.png",
   skills: [
     "React",
     "React Native",
@@ -88,7 +89,7 @@ export const DATA = {
       href: "#",
       location: "Remote",
       title: "Software Engineer",
-      logoUrl: "/victor1.jpg",
+      logoUrl: "/me.png",
       start: "January 2023",
       end: "May 2025",
       description:
