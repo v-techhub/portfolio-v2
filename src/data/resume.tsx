@@ -9,7 +9,7 @@ export const DATA = {
   locationLink:
     "https://www.google.com/maps/place/Alimosho,+Ipaja+South+102213,+Lagos",
   description:
-    "Software Engineer • Web Developer • Mobile App Developer • Aspiring Full Stack Engineer",
+    "Software Engineer • Web Developer • Mobile App Developer • Full Stack Engineer",
   summary:
     "Software Engineer with 3+ years of experience in developing scalable software solutions. Expertise in full-stack development, specializing in developing dynamic, user-friendly, and scalable web and mobile applications. Skilled in crafting seamless user experiences and experienced in building business applications that streamline workflows and drive efficiency.",
   avatarUrl: "/me.png",
