@@ -8,10 +8,9 @@ export const DATA = {
   location: "Lagos Nigeria",
   locationLink:
     "https://www.google.com/maps/place/Alimosho,+Ipaja+South+102213,+Lagos",
-  description:
-    "Software Engineer • Web Developer • Mobile App Developer • Full Stack Engineer",
+  description: "Product Engineer • SharePoint Developer",
   summary:
-    "Software Engineer with 3+ years of experience in developing scalable software solutions. Expertise in full-stack development, specializing in developing dynamic, user-friendly, and scalable web and mobile applications. Skilled in crafting seamless user experiences and experienced in building business applications that streamline workflows and drive efficiency.",
+    "Software Engineer crafting scalable digital products where clean design meets intelligent systems. Experienced in designing robust architectures, leading end-to-end delivery, and building software that scales with business growth.",
   avatarUrl: "/victor.jpg",
   skills: [
     "React",
@@ -21,12 +20,12 @@ export const DATA = {
     "Node.js",
     "Express.js",
     "MongoDB",
-    "SPFx",
+    "SharePoint Framework",
     "Firebase",
     "Git",
     // "Angular",
     "MongoDB",
-    "AWS",
+    "Azure",
     // "Go",
     // "Postgres",
     // "Docker",
@@ -75,14 +74,14 @@ export const DATA = {
     {
       company: "Lotus Beta Analytics",
       href: "https://www.lotusbetaanalytics.com",
-      badges: [],
+      badges: ["Assistant Tech Lead"],
       location: "Remote",
-      title: "Business Solution and Application Developer",
+      title: "Business Solutions and Application Developer",
       logoUrl: "/lba.png",
       start: "May 2025",
       end: "Till Date",
       description:
-        "Built and maintained full-stack applications using Next.js, React.js, Node.js, and MongoDB. Developed cross-platform mobile apps with React Native and Firebase. Customized SharePoint solutions to automate internal processes and enhance team collaboration. Contributed to architecture decisions and delivery of scalable features.",
+        "Customized SharePoint solutions to automate internal processes and enhance team collaboration. Built and maintained full-stack applications using Next.js, React.js, Node.js, and MongoDB. Developed cross-platform mobile apps with React Native and Firebase. Contributed to architecture decisions and delivery of scalable features.",
     },
     {
       company: "Freelance",
@@ -90,7 +89,7 @@ export const DATA = {
       href: "#",
       location: "Remote",
       title: "Software Engineer",
-      logoUrl: "/me.png",
+      logoUrl: "/victor.jpg",
       start: "January 2023",
       end: "May 2025",
       description:
