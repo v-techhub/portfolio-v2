@@ -11,7 +11,7 @@ export const DATA = {
   description:
     "Assistant Technical Lead @ Lotus Beta Analytics | Architecting Scalable Enterprise Systems | React • Mobile Apps • SPFx • Full-Stack Engineering",
   summary: `I am a Full-Stack Software Developer and Assistant Technical Lead at Lotus Beta Analytics, where I lead the design and delivery of scalable, enterprise-grade web and mobile applications within a 20-engineer team. I specialize in architecting reliable backend systems and high-performance frontends using Typescript, React, SharePoint Framework (SPFx), Node.js, Golang and Postgres/MongoDB, with a strong focus on scalability, maintainability, and clean architecture.  I contribute to technical direction, mentor engineers, and enforce best practices to ensure consistent, production-ready delivery. My work centers on building resilient systems, optimizing complex business workflows, and delivering secure, data-driven solutions that drive real organizational impact.`,
-  avatarUrl: "/victorscripts.jpeg",
+  avatarUrl: "/victorscripts.jpg",
   skills: [
     "React",
     "React Native",
@@ -90,7 +90,7 @@ export const DATA = {
       href: "#",
       location: "Remote",
       title: "Software Engineer",
-      logoUrl: "/victorscripts.jpeg",
+      logoUrl: "/victorscripts.jpg",
       start: "January 2023",
       end: "May 2025",
       description:
