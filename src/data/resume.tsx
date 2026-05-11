@@ -109,8 +109,8 @@ export const DATA = {
   ],
   projects: [
     {
-      title: "smartflow.io (still in development)",
-      href: "#",
+      title: "smartflow.io",
+      href: "https://smartflow-backend-fb4b.onrender.com",
       dates: "August 2025 - Till Date",
       active: false,
       description:
@@ -132,18 +132,18 @@ export const DATA = {
       ],
       links: [
         {
-          type: "Website",
-          href: "https://victor-adeshina.vercel.app",
+          type: "Frontend",
+          href: "https://github.com/v-techhub/Smartflow-Frontend",
           icon: <Icons.globe className="size-3" />,
         },
         {
-          type: "Source",
-          href: "https://github.com/v-techhub",
+          type: "Backend",
+          href: "https://github.com/v-techhub/Smartflow-Backend",
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "",
-      video: "https://cdn.llm.report/openai-demo.mp4",
+      image: "/showcase.png",
+      video: "showcase.mp4",
     },
   ],
   hackathons: [
