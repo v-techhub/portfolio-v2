@@ -143,7 +143,40 @@ export const DATA = {
         },
       ],
       image: "/showcase.png",
-      video: "showcase.mp4",
+      //   video: "showcase.mp4",
+    },
+    {
+      active: true,
+      title: "Fluxio Admin Dashboard",
+      description:
+        "A modern e-commerce admin dashboard crafted to showcase my frontend development skills through polished UI design, reusable architecture, responsive layouts, analytics visualizations, and smooth user interactions. Fluxio focuses on creating a production-level admin experience using React, TypeScript, and scalable component patterns. Additional screens and features are actively being developed.",
+      technologies: [
+        "React",
+        "TypeScript",
+        "Vite",
+        "Ant Design",
+        "SCSS",
+        "React Router",
+        "React Hook Form",
+        "Zod",
+        "Recharts",
+        "Framer Motion",
+        "Draft.js",
+        "UUID",
+      ],
+      links: [
+        {
+          type: "Live Demo",
+          href: "https://fluxio-admin.vercel.app",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Source Code",
+          href: "https://github.com/v-techhub/fluxio-admin",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "/fluxio.png",
     },
   ],
   hackathons: [
