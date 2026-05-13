@@ -148,6 +148,8 @@ export const DATA = {
     {
       active: true,
       title: "Fluxio Admin Dashboard",
+      href: "https://fluxio-admin.vercel.app",
+      dates: "Feb 2025 - Till Date",
       description:
         "A modern e-commerce admin dashboard crafted to showcase my frontend development skills through polished UI design, reusable architecture, responsive layouts, analytics visualizations, and smooth user interactions. Fluxio focuses on creating a production-level admin experience using React, TypeScript, and scalable component patterns. Additional screens and features are actively being developed.",
       technologies: [
