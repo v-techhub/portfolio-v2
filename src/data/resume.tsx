@@ -183,7 +183,7 @@ export const DATA = {
   ],
   awards: [
     {
-      title: "Best Employee Of the Year",
+      title: "Staff of The Year",
       dates: "December 2025 - March 2026",
       location: "Lotus Beta Analytics",
       description:
