@@ -109,6 +109,41 @@ export const DATA = {
   ],
   projects: [
     {
+      active: true,
+      title: "Fluxio Admin Dashboard",
+      href: "https://fluxio-admin.vercel.app",
+      dates: "Feb 2025 - Till Date",
+      description:
+        "A modern e-commerce admin dashboard crafted to showcase my frontend development skills through polished UI design, reusable architecture, responsive layouts, analytics visualizations, and smooth user interactions. Fluxio focuses on creating a production-level admin experience using React, TypeScript, and scalable component patterns. Additional screens and features are actively being developed.",
+      technologies: [
+        "React",
+        "TypeScript",
+        "Vite",
+        "Ant Design",
+        "SCSS",
+        "React Router",
+        "React Hook Form",
+        "Zod",
+        "Recharts",
+        "Framer Motion",
+        "Draft.js",
+        "UUID",
+      ],
+      links: [
+        {
+          type: "Live Demo",
+          href: "https://fluxio-admin.vercel.app",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Source Code",
+          href: "https://github.com/v-techhub/fluxio-admin",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "/fluxio.png",
+    },
+    {
       title: "smartflow.io",
       href: "https://smartflow-backend-fb4b.onrender.com",
       dates: "August 2025 - Till Date",
@@ -145,52 +180,15 @@ export const DATA = {
       image: "/showcase.png",
       //   video: "showcase.mp4",
     },
-    {
-      active: true,
-      title: "Fluxio Admin Dashboard",
-      href: "https://fluxio-admin.vercel.app",
-      dates: "Feb 2025 - Till Date",
-      description:
-        "A modern e-commerce admin dashboard crafted to showcase my frontend development skills through polished UI design, reusable architecture, responsive layouts, analytics visualizations, and smooth user interactions. Fluxio focuses on creating a production-level admin experience using React, TypeScript, and scalable component patterns. Additional screens and features are actively being developed.",
-      technologies: [
-        "React",
-        "TypeScript",
-        "Vite",
-        "Ant Design",
-        "SCSS",
-        "React Router",
-        "React Hook Form",
-        "Zod",
-        "Recharts",
-        "Framer Motion",
-        "Draft.js",
-        "UUID",
-      ],
-      links: [
-        {
-          type: "Live Demo",
-          href: "https://fluxio-admin.vercel.app",
-          icon: <Icons.globe className="size-3" />,
-        },
-        {
-          type: "Source Code",
-          href: "https://github.com/v-techhub/fluxio-admin",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-      image: "/fluxio.png",
-    },
   ],
-  hackathons: [
+  awards: [
     {
-      title: "Hack Western 5",
-      dates: "November 23rd - 25th, 2018",
-      location: "London, Ontario",
+      title: "Best Employee Of the Year",
+      dates: "December 2025 - March 2026",
+      location: "Lotus Beta Analytics",
       description:
-        "Developed a mobile application which delivered bedtime stories to children using augmented reality.",
-      image:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/hack-western.png",
-      mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-white.svg",
+        "Recognized for exceptional technical contributions, engineering excellence, and the consistent delivery of high-quality software solutions that drive business impact.",
+      image: "/lba.png",
       links: [],
     },
   ],
