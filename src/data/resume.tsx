@@ -9,8 +9,21 @@ export const DATA = {
   locationLink:
     "https://www.google.com/maps/place/Alimosho,+Ipaja+South+102213,+Lagos",
   description:
-    "Assistant Technical Lead @ Lotus Beta Analytics | Architecting Scalable Enterprise Systems | React • Mobile Apps • SPFx • Full-Stack Engineering",
-  summary: `I am a Full-Stack Software Developer and Assistant Technical Lead at Lotus Beta Analytics, where I lead the design and delivery of scalable, enterprise-grade web and mobile applications within a 20-engineer team. I specialize in architecting reliable backend systems and high-performance frontends using Typescript, React, SharePoint Framework (SPFx), Node.js, Golang and Postgres/MongoDB, with a strong focus on scalability, maintainability, and clean architecture.  I contribute to technical direction, mentor engineers, and enforce best practices to ensure consistent, production-ready delivery. My work centers on building resilient systems, optimizing complex business workflows, and delivering secure, data-driven solutions that drive real organizational impact.`,
+    "Full-Stack Software Engineer with 3+ years of experience building scalable applications people actually enjoy using. From heavy-duty enterprise platforms for financial giants to sleek mobile apps, I turn complex business logic into high-performance digital reality. Based in Nigeria and fully equipped to ship premium code for remote-first teams worldwide.",
+  summary: `**Full-Stack Software Engineer** with 3+ years of experience building scalable products that people actually enjoy using. From heavy-duty enterprise platforms for financial giants to sleek mobile apps, I turn complex business logic into high-performance, production-ready reality.
+
+I thrive in fast-paced environments, speak fluent **TypeScript, React, Node.js, and Go**, and specialize in turning clunky legacy systems into seamless, premium digital experiences.
+
+> 🌍 **Open to Global Opportunities:** Fully equipped, battle-tested, and ready to ship high-impact code for remote-first teams worldwide.
+
+---
+
+### **Why Bring Me On Board?**
+
+* **Enterprise-Grade Execution:** Trusted by major corporations, banks, and energy sectors (like MTN Nigeria, LAPO, and Federal Mortgage Bank) to architect mission-critical onboarding apps and secure data migrations.
+* **Revenue-Driven Engineering:** Focused on the bottom line—whether that means boosting conversion rates by implementing frictionless global/regional checkouts (Paystack + Google Pay) or optimizing backend throughput using Go.
+* **Sleek UI/UX Obsessed:** I build for the user. I specialize in upgrading dated applications into premium, ultra-modern interfaces inspired by clean Apple and Shadcn design standards.
+* **Cross-Platform Versatility:** Seamlessly jumping between robust server-side API architecture and high-performance mobile apps without missing a beat.`,
   avatarUrl: "/victorscripts.jpg",
   skills: [
     "React",
@@ -34,7 +47,7 @@ export const DATA = {
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
-    { href: "/victoradeshinarésume.pdf", icon: FolderKey, label: "Résumé" },
+    { href: "/resume_2026.pdf", icon: FolderKey, label: "Résumé" },
     // { href: "/blog", icon: NotebookIcon, label: "Blog" },
   ],
   contact: {
