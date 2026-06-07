@@ -9,11 +9,17 @@ import {
   //  DM_Sans,
   Quicksand,
 } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
 const fontSans = Quicksand({
   subsets: ["latin"],
   variable: "--font-sans",
+});
+
+const clashDisplay = localFont({
+  src: "../assets/fonts/ClashDisplay-Bold.otf",
+  variable: "--font-clash-display",
 });
 
 export const metadata: Metadata = {
@@ -63,6 +69,7 @@ export default function RootLayout({
         className={cn(
           "min-h-screen bg-background font-sans antialiased max-w-2xl mx-auto py-12 sm:py-24 px-6",
           fontSans.variable,
+          clashDisplay.variable,
         )}
       >
         <ThemeProvider attribute="class" defaultTheme="light">
