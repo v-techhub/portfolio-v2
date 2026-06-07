@@ -26,7 +26,7 @@ export default function Page() {
             <div className="flex-col flex flex-1 space-y-1.5">
               <BlurFade delay={BLUR_FADE_DELAY}>
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none flex flex-wrap items-center gap-x-2 gap-y-0">
-                  <span>Hi, I'm</span>
+                  <span>Hi, I&apos;m</span>
                   <span className="inline-flex items-center gap-x-1 sm:gap-x-2">
                     {DATA.name.split(" ")[0]}
                     <span className="size-16 sm:size-20 flex items-center justify-center -mt-2 sm:-mt-4 -ml-2 sm:-ml-3">
