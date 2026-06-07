@@ -24,7 +24,7 @@ I thrive in fast-paced environments, speak fluent **TypeScript, React, Node.js, 
 * **Revenue-Driven Engineering:** Focused on the bottom line—whether that means boosting conversion rates by implementing frictionless global/regional checkouts (Paystack + Google Pay) or optimizing backend throughput using Go.
 * **Sleek UI/UX Obsessed:** I build for the user. I specialize in upgrading dated applications into premium, ultra-modern interfaces inspired by clean Apple and Shadcn design standards.
 * **Cross-Platform Versatility:** Seamlessly jumping between robust server-side API architecture and high-performance mobile apps without missing a beat.`,
-  avatarUrl: "/victorscripts.jpg",
+  avatarUrl: "/victor.jpg",
   skills: [
     "React",
     "React Native",
@@ -103,7 +103,7 @@ I thrive in fast-paced environments, speak fluent **TypeScript, React, Node.js, 
       href: "#",
       location: "Remote",
       title: "Software Engineer",
-      logoUrl: "/victorscripts.jpg",
+      logoUrl: "/victor.jpg",
       start: "January 2023",
       end: "May 2025",
       description:
