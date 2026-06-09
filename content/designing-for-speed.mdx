@@ -1,0 +1,67 @@
+---
+title: "Designing for Speed: Why Fast UIs Feel Better"
+publishedAt: "2026-04-18"
+summary: "A short take on how speed, feedback, and spacing shape the way people trust a product."
+---
+
+When a product feels fast, people forgive a lot more.
+
+Not because the code is perfect, but because the experience feels controlled. Buttons respond quickly. Loading states appear where they should. Layout shifts stay out of the way. Small details make the whole app feel calmer.
+
+## What fast really means
+
+Speed is not just network time. It is the sum of:
+
+- immediate feedback
+- predictable layouts
+- short visual distance between action and response
+- clear empty states
+- no surprise jumps
+
+## My rule of thumb
+
+If a user has to wonder whether something worked, the experience is already too slow.
+
+That is why I care about:
+
+1. visible loading states
+2. optimistic UI when it makes sense
+3. clean spacing
+4. calm motion
+5. removing unnecessary steps
+
+## A tiny example
+
+```tsx
+function SaveButton() {
+  const [saving, setSaving] = useState(false);
+
+  return (
+    <button
+      disabled={saving}
+      onClick={async () => {
+        setSaving(true);
+        await saveData();
+        setSaving(false);
+      }}
+    >
+      {saving ? "Saving..." : "Save changes"}
+    </button>
+  );
+}
+```
+
+That small text change matters. It tells the user the system heard them.
+
+## A quick checklist
+
+| Area | Good signal | Bad signal |
+| --- | --- | --- |
+| Buttons | Instant response | No feedback |
+| Forms | Clear validation | Errors after submit only |
+| Lists | Skeletons or placeholders | Blank white screen |
+| Navigation | Smooth transitions | Sudden jumps |
+
+The goal is not to make every screen flashy.
+
+The goal is to make every interaction feel dependable.

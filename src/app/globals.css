@@ -72,9 +72,20 @@
     }
     body {
       @apply bg-background text-foreground;
+      background-image:
+        radial-gradient(circle at top left, hsl(var(--primary) / 0.08), transparent 28%),
+        radial-gradient(circle at 85% 10%, hsl(35 90% 55% / 0.08), transparent 22%),
+        radial-gradient(circle at 50% 100%, hsl(var(--foreground) / 0.04), transparent 24%);
+      background-attachment: fixed;
+      background-repeat: no-repeat;
     }
     h1, h2, h3, h4, h5, h6 {
-      font-family: var(--font-clash-display), var(--font-sans), sans-serif;
+      font-family: var(--font-clash-display), ui-sans-serif, system-ui, sans-serif;
+    }
+
+    ::selection {
+      background: hsl(var(--primary));
+      color: hsl(var(--primary-foreground));
     }
   }
 

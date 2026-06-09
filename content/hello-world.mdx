@@ -1,16 +1,58 @@
 ---
-title: "Hello World"
-publishedAt: "2024-06-18"
-summary: "My first post on my new blog."
+title: "Why Build Quality Matters More Than Clever Code"
+publishedAt: "2025-11-08"
+summary: "A practical note on why clean implementation, maintainability, and clarity usually beat fancy tricks."
 ---
 
-Hi there!
+There is a version of engineering that looks impressive in a code review and still ages badly in production.
 
-```jsx
-console.log("Hello World");
+I try to avoid that version.
+
+What lasts is not the cleverest implementation. It is the one that is easy to understand, easy to extend, and hard to break under pressure.
+
+## The tradeoff I pay attention to
+
+Good engineering is often quiet:
+
+- fewer surprises
+- smaller components
+- clearer naming
+- better defaults
+- more predictable behavior
+
+That kind of work does not always feel flashy, but it makes a product easier to trust.
+
+## A simple rule
+
+If I cannot explain a piece of code in one or two sentences, it is probably doing too much.
+
+That has saved me from shipping many things that were technically valid but operationally messy.
+
+## A tiny example
+
+```ts
+function getStatusLabel(isActive: boolean, isPending: boolean) {
+  if (isPending) return "Processing";
+  if (isActive) return "Active";
+  return "Inactive";
+}
 ```
 
-| Header 1 | Header 2 |
-| -------- | -------- |
-| Cell 1   | Cell 2   |
-| Cell 3   | Cell 4   |
+This is not clever.
+
+That is the point.
+
+Readable code is easier to extend, easier to test, and easier for teammates to trust.
+
+## What I want my projects to feel like
+
+| Quality | What it looks like |
+| --- | --- |
+| Maintainable | Components do one job well |
+| Reliable | Edge cases are handled explicitly |
+| Polished | UI feedback is immediate and calm |
+| Professional | The experience feels intentional |
+
+When those things line up, the codebase becomes easier to work in and the product becomes easier to believe in.
+
+That is usually the goal.

@@ -1,14 +1,12 @@
 import Navbar from "@/components/navbar";
+import FullscreenLoader from "@/components/fullscreen-loader";
 import { ThemeProvider } from "@/components/theme-provider";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import LenisProvider from "@/components/lenis-provider";
 import { DATA } from "@/data/resume";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
-import {
-  //  DM_Sans,
-  Quicksand,
-} from "next/font/google";
+import { Quicksand } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 
@@ -67,7 +65,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body
         className={cn(
-          "min-h-screen bg-background font-sans antialiased max-w-2xl mx-auto py-12 sm:py-24 px-6",
+          "min-h-screen bg-background font-sans antialiased max-w-5xl mx-auto py-8 sm:py-16 px-6",
           fontSans.variable,
           clashDisplay.variable,
         )}
@@ -75,6 +73,7 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="light">
           <TooltipProvider delayDuration={0}>
             <LenisProvider>
+              <FullscreenLoader />
               {children}
               <Navbar />
             </LenisProvider>

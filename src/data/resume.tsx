@@ -9,19 +9,19 @@ export const DATA = {
   locationLink:
     "https://www.google.com/maps/place/Alimosho,+Ipaja+South+102213,+Lagos",
   description:
-    "Full-Stack Software Engineer with 3+ years of experience building scalable applications people actually enjoy using. From heavy-duty enterprise platforms for financial giants to sleek mobile apps, I turn complex business logic into high-performance digital reality. Based in Nigeria and fully equipped to ship premium code for remote-first teams worldwide.",
+    "Full-Stack Software Engineer with 3+ years of experience building scalable products people actually enjoy using. From enterprise platforms for financial teams to sleek mobile apps, I turn complex business logic into high-performance, production-ready digital experiences. Based in Nigeria and ready to ship premium code for remote-first teams worldwide.",
   summary: `**Full-Stack Software Engineer** with 3+ years of experience building scalable products that people actually enjoy using. From heavy-duty enterprise platforms for financial giants to sleek mobile apps, I turn complex business logic into high-performance, production-ready reality.
 
 I thrive in fast-paced environments, speak fluent **TypeScript, React, Node.js, and Go**, and specialize in turning clunky legacy systems into seamless, premium digital experiences.
 
-> 🌍 **Open to Global Opportunities:** Fully equipped, battle-tested, and ready to ship high-impact code for remote-first teams worldwide.
+> **Open to Global Opportunities:** Fully equipped, battle-tested, and ready to ship high-impact code for remote-first teams worldwide.
 
 ---
 
 ### **Why Bring Me On Board?**
 
-* **Enterprise-Grade Execution:** Trusted by major corporations, banks, and energy sectors (like MTN Nigeria, LAPO, and Federal Mortgage Bank) to architect mission-critical onboarding apps and secure data migrations.
-* **Revenue-Driven Engineering:** Focused on the bottom line—whether that means boosting conversion rates by implementing frictionless global/regional checkouts (Paystack + Google Pay) or optimizing backend throughput using Go.
+* **Enterprise-Grade Execution:** Trusted by major corporations, banks, and energy sectors to architect mission-critical onboarding apps and secure data migrations.
+* **Revenue-Driven Engineering:** Focused on the bottom line whether that means improving conversion flows or optimizing backend throughput with Go.
 * **Sleek UI/UX Obsessed:** I build for the user. I specialize in upgrading dated applications into premium, ultra-modern interfaces inspired by clean Apple and Shadcn design standards.
 * **Cross-Platform Versatility:** Seamlessly jumping between robust server-side API architecture and high-performance mobile apps without missing a beat.`,
   avatarUrl: "/victor.jpg",
@@ -36,19 +36,14 @@ I thrive in fast-paced environments, speak fluent **TypeScript, React, Node.js, 
     "SharePoint Framework",
     "Firebase",
     "Git",
-    // "Angular",
-    "MongoDB",
     "Azure",
     "Google Cloud",
     "Go",
     "Postgres",
-    // "Docker",
-    // "Kubernetes",
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
-    { href: "/resume_2026.pdf", icon: FolderKey, label: "Résumé" },
-    // { href: "/blog", icon: NotebookIcon, label: "Blog" },
+    { href: "/resume_2026.pdf", icon: FolderKey, label: "Resume" },
   ],
   contact: {
     email: "victoradeshina922@gmail.com",
@@ -58,28 +53,18 @@ I thrive in fast-paced environments, speak fluent **TypeScript, React, Node.js, 
         name: "GitHub",
         url: "https://github.com/v-techhub",
         icon: Icons.github,
-
         navbar: true,
       },
       LinkedIn: {
         name: "LinkedIn",
         url: "https://www.linkedin.com/in/victor-adeshina-a40191304",
         icon: Icons.linkedin,
-
         navbar: true,
       },
-      // X: {
-      //   name: "X",
-      //   url: "https://dub.sh/victor-adeshina",
-      //   icon: Icons.x,
-
-      //   navbar: true,
-      // },
       Email: {
         name: "Send Email",
         url: "mailto:victoradeshina922@gmail.com",
         icon: Icons.email,
-
         navbar: true,
       },
     },
@@ -123,11 +108,17 @@ I thrive in fast-paced environments, speak fluent **TypeScript, React, Node.js, 
   projects: [
     {
       active: true,
+      featured: true,
       title: "Fluxio Admin Dashboard",
       href: "https://fluxio-admin.vercel.app",
       dates: "Feb 2025 - Till Date",
       description:
         "A modern e-commerce admin dashboard crafted to showcase my frontend development skills through polished UI design, reusable architecture, responsive layouts, analytics visualizations, and smooth user interactions. Fluxio focuses on creating a production-level admin experience using React, TypeScript, and scalable component patterns. Additional screens and features are actively being developed.",
+      highlights: [
+        "Production-grade admin UI",
+        "Reusable component architecture",
+        "Analytics-focused workflows",
+      ],
       technologies: [
         "React",
         "TypeScript",
@@ -155,14 +146,21 @@ I thrive in fast-paced environments, speak fluent **TypeScript, React, Node.js, 
         },
       ],
       image: "/fluxio.png",
+      video: undefined,
     },
     {
+      active: false,
+      featured: false,
       title: "smartflow.io",
       href: "https://smartflow-backend-fb4b.onrender.com",
       dates: "August 2025 - Till Date",
-      active: false,
       description:
         "SmartFlow is a modern, intelligent project management application designed to solve real-world collaboration challenges in software development teams. Built with the MERN stack and enhanced with AI capabilities, it bridges the gap between project planning and actual development work through seamless GitHub integration and real-time collaboration features.",
+      highlights: [
+        "AI-assisted project planning",
+        "Real-time collaboration",
+        "GitHub-integrated workflows",
+      ],
       technologies: [
         "React.JS",
         "Typescript",
@@ -191,7 +189,7 @@ I thrive in fast-paced environments, speak fluent **TypeScript, React, Node.js, 
         },
       ],
       image: "/showcase.png",
-      //   video: "showcase.mp4",
+      video: "/showcase.mp4",
     },
   ],
   awards: [
@@ -202,7 +200,13 @@ I thrive in fast-paced environments, speak fluent **TypeScript, React, Node.js, 
       description:
         "Recognized for exceptional technical contributions, engineering excellence, and the consistent delivery of high-quality software solutions that drive business impact.",
       image: "/lba.png",
-      links: [],
+      links: [
+        {
+          title: "LinkedIn post",
+          href: "https://www.linkedin.com/feed/update/urn:li:activity:7407708515307274240?updateEntityUrn=urn%3Ali%3Afs_updateV2%3A%28urn%3Ali%3Aactivity%3A7407708515307274240%2CFEED_DETAIL%2CEMPTY%2CDEFAULT%2Cfalse%29",
+          icon: <Icons.linkedin className="size-3" />,
+        },
+      ],
     },
   ],
 } as const;

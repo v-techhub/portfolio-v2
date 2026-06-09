@@ -43,10 +43,18 @@ export async function getPost(slug: string) {
   let source = fs.readFileSync(filePath, "utf-8");
   const { content: rawContent, data: metadata } = matter(source);
   const content = await markdownToHTML(rawContent);
+  const words = rawContent
+    .replace(/```[\s\S]*?```/g, " ")
+    .replace(/`[^`]*`/g, " ")
+    .replace(/[#>*_\-\[\]\(\)\|]/g, " ")
+    .split(/\s+/)
+    .filter(Boolean).length;
+  const readingTime = Math.max(1, Math.ceil(words / 200));
   return {
     source: content,
     metadata,
     slug,
+    readingTime,
   };
 }
 
@@ -55,11 +63,12 @@ async function getAllPosts(dir: string) {
   return Promise.all(
     mdxFiles.map(async (file) => {
       let slug = path.basename(file, path.extname(file));
-      let { metadata, source } = await getPost(slug);
+      let { metadata, source, readingTime } = await getPost(slug);
       return {
         metadata,
         slug,
         source,
+        readingTime,
       };
     }),
   );

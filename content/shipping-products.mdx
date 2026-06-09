@@ -1,0 +1,53 @@
+---
+title: "What I Look For Before Shipping a Product"
+publishedAt: "2026-03-02"
+summary: "A practical checklist I use before I consider a feature ready for real users."
+---
+
+Shipping is where good ideas get tested.
+
+You can have a great layout, a clever backend, and a clean component system, but if the product is confusing, users will still bounce.
+
+## Before I ship, I check these things
+
+- Does the feature solve a real problem?
+- Is the user journey obvious without explanation?
+- Are the edge cases handled?
+- Does it still feel good on mobile?
+- Is the loading state clear?
+- Will this be easy to maintain later?
+
+## The hidden cost of skipping polish
+
+Polish is not just visual.
+
+It includes:
+
+- labels that make sense
+- errors that help instead of shame
+- buttons that behave predictably
+- spacing that supports scanning
+- transitions that do not distract
+
+## Example of a tiny but useful improvement
+
+```ts
+const statusMessage =
+  isSubmitting ? "Processing your request..." : "Continue";
+```
+
+That tiny line can reduce hesitation.
+
+People trust systems that speak plainly.
+
+## My shipping checklist
+
+1. Test on a small screen
+2. Check keyboard accessibility
+3. Read every empty state out loud
+4. Try the feature with bad data
+5. Remove anything that feels decorative but unhelpful
+
+If I can hand the feature to someone and they instantly know what to do, then it is probably ready.
+
+And if they smile while using it, even better.
