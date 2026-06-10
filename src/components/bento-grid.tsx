@@ -3,8 +3,12 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { DATA } from "@/data/resume";
-import { cn } from "@/lib/utils";
-import { Award, Clock, LayoutDashboard, Sparkles, Workflow } from "lucide-react";
+import rocketAsset from "@/assets/images/3dicons-rocket-dynamic-color.png";
+import chartAsset from "@/assets/images/3dicons-chart-dynamic-color.png";
+import mobileAsset from "@/assets/images/3dicons-mobile-dynamic-color.png";
+import pinAsset from "@/assets/images/3dicons-map-pin-dynamic-color.png";
+import shieldAsset from "@/assets/images/3dicons-shield-dynamic-color.png";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
 export default function BentoGrid() {
@@ -66,9 +70,7 @@ export default function BentoGrid() {
         <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
           <div className="relative overflow-hidden rounded-2xl border bg-card p-6 shadow-sm transition-shadow duration-200 hover:shadow-md">
             <div className="flex items-start justify-between">
-              <div className="rounded-xl bg-primary/10 p-2.5 text-primary">
-                <Clock className="size-5" />
-              </div>
+              <Image src={pinAsset} alt="Map pin" className="size-12 object-contain" />
               <div className="rounded-full bg-emerald-500/10 px-3 py-1 text-[11px] font-semibold text-emerald-600 dark:text-emerald-400">
                 Available
               </div>
@@ -91,9 +93,7 @@ export default function BentoGrid() {
           <div className="relative overflow-hidden rounded-2xl border bg-card p-6 shadow-sm transition-shadow duration-200 hover:shadow-md md:col-span-2">
             <div className="absolute right-0 top-0 -mr-8 -mt-8 size-36 rounded-full bg-primary/5 blur-3xl" />
             <div className="flex items-start justify-between gap-3">
-              <div className="rounded-xl bg-amber-500/10 p-2.5 text-amber-500">
-                <Sparkles className="size-5" />
-              </div>
+              <Image src={rocketAsset} alt="Rocket" className="size-14 object-contain" />
               <Badge variant="secondary" className="border-0 bg-amber-500/10 text-amber-600 dark:text-amber-400">
                 Current focus
               </Badge>
@@ -135,9 +135,7 @@ export default function BentoGrid() {
 
           <div className="relative overflow-hidden rounded-2xl border bg-card p-6 shadow-sm transition-shadow duration-200 hover:shadow-md md:col-span-2">
             <div className="flex items-start justify-between gap-3">
-              <div className="rounded-xl bg-primary/10 p-2.5 text-primary">
-                <Workflow className="size-5" />
-              </div>
+              <Image src={shieldAsset} alt="Shield" className="size-12 object-contain" />
               <Badge variant="secondary">Stack</Badge>
             </div>
 
@@ -155,9 +153,7 @@ export default function BentoGrid() {
 
           <div className="relative overflow-hidden rounded-2xl border bg-card p-6 shadow-sm transition-shadow duration-200 hover:shadow-md">
             <div className="flex items-start justify-between gap-3">
-              <div className="rounded-xl bg-primary/10 p-2.5 text-primary">
-                <Award className="size-5" />
-              </div>
+              <Image src={chartAsset} alt="Chart" className="size-12 object-contain" />
               <Badge variant="secondary">Proof</Badge>
             </div>
 
@@ -199,9 +195,7 @@ export default function BentoGrid() {
 
           <div className="relative overflow-hidden rounded-2xl border bg-card p-6 shadow-sm transition-shadow duration-200 hover:shadow-md">
             <div className="flex items-start justify-between gap-3">
-              <div className="rounded-xl bg-primary/10 p-2.5 text-primary">
-                <LayoutDashboard className="size-5" />
-              </div>
+              <Image src={mobileAsset} alt="Mobile" className="size-12 object-contain" />
               <Badge variant="secondary">Approach</Badge>
             </div>
 

@@ -8,8 +8,10 @@ import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { DATA } from "@/data/resume";
+import trophyIcon from "@/assets/images/3dicons-trophy-dynamic-color.png";
 import { ArrowRight, BookOpen, Download, Mail, MapPin, Sparkles } from "lucide-react";
 import dynamic from "next/dynamic";
+import Image from "next/image";
 import Link from "next/link";
 import Markdown from "react-markdown";
 
@@ -125,7 +127,7 @@ export default function Page() {
                 </div>
 
                 <div className="mt-5 space-y-3">
-                  <div className="rounded-2xl bg-muted/50 p-4">
+                  {/* <div className="rounded-2xl bg-muted/50 p-4">
                     <p className="text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground">
                       Current focus
                     </p>
@@ -133,7 +135,7 @@ export default function Page() {
                     <p className="text-sm text-muted-foreground">
                       Building a crisp analytics-first dashboard with reusable patterns and polished workflows.
                     </p>
-                  </div>
+                  </div> */}
                   <div className="rounded-2xl bg-muted/50 p-4">
                     <p className="text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground">
                       Available for
@@ -317,7 +319,10 @@ export default function Page() {
       <section id="awards" className="space-y-8 py-4 sm:py-8">
         <BlurFade delay={BLUR_FADE_DELAY * 15}>
           <div className="space-y-3">
-            <Badge className="rounded-full px-3 py-1">Recognition</Badge>
+            <div className="flex items-center gap-3">
+              <Image src={trophyIcon} alt="Trophy" className="size-12 object-contain" />
+              <Badge className="rounded-full px-3 py-1">Recognition</Badge>
+            </div>
             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
               Achievements and recognition
             </h2>

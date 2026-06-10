@@ -100,9 +100,9 @@
   background: linear-gradient(
     90deg,
     transparent 0%,
-    rgba(184, 123, 42, 0.35) 15%,
+    rgba(255, 255, 255, 0.18) 15%,
     rgba(255, 255, 255, 0.9) 50%,
-    rgba(184, 123, 42, 0.35) 85%,
+    rgba(255, 255, 255, 0.18) 85%,
     transparent 100%
   );
   opacity: 0.85;
@@ -142,7 +142,7 @@
   position: absolute;
   inset: -24px;
   border-radius: 9999px;
-  background: radial-gradient(circle, rgba(184, 123, 42, 0.2), transparent 68%);
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.08), transparent 68%);
 }
 
 .logoImage {
@@ -163,7 +163,7 @@
   position: absolute;
   inset: -6px;
   border-radius: 50%;
-  border: 1px solid rgba(184, 123, 42, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.16);
 }
 
 .ringOuter {
@@ -199,8 +199,8 @@
   width: 6px;
   height: 6px;
   border-radius: 9999px;
-  background: #b87b2a;
-  box-shadow: 0 0 0 4px rgba(184, 123, 42, 0.15);
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.08);
 }
 
 .wordmarkPrimary {
@@ -214,8 +214,8 @@
 .wordmarkDivider {
   width: 28px;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(184, 123, 42, 0.95), transparent);
-  opacity: 0.95;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.7), transparent);
+  opacity: 0.85;
 }
 
 .wordmarkSecondary {
@@ -252,9 +252,9 @@
   bottom: 0;
   width: 0%;
   border-radius: inherit;
-  background: linear-gradient(90deg, #b87b2a 0%, #f1d2a2 50%, #b87b2a 100%);
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0.95) 50%, rgba(255, 255, 255, 0.35) 100%);
   opacity: 0.92;
-  box-shadow: 0 0 16px rgba(184, 123, 42, 0.55);
+  box-shadow: 0 0 16px rgba(255, 255, 255, 0.16);
   animation: bar-fill 1.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.3s both;
 }
 
