@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import rocketAsset from "@/assets/images/3dicons-rocket-dynamic-color.png";
 import styles from "./fullscreen-loader.module.css";
 
 const WIPE_MS = 1400;
@@ -54,8 +53,8 @@ export default function FullscreenLoader() {
             <div className={styles.ringOuter} />
             <div className={styles.ring} />
             <Image
-              src={rocketAsset}
-              alt="Rocket"
+              src="/victor_mono.png"
+              alt="Victor Adeshina"
               width={72}
               height={72}
               priority

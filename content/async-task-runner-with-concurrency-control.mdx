@@ -1,0 +1,148 @@
+---
+title: "Solving the Uber SDE-2 Interview: Async Task Runner with Concurrency & Priority"
+publishedAt: "2026-06-27"
+summary: "A step-by-step engineering breakdown of how to design a high-performance asynchronous task queue in TypeScript with concurrency limits, error isolation, and priority scheduling."
+---
+
+In SDE-2 frontend interviews at top-tier companies like Uber, interviewers love to test your understanding of the JavaScript event loop, asynchronous scheduling, and data structures. One classic problem is building an **Asynchronous Task Runner with Concurrency Control**.
+
+This post breaks down the problem, provides a production-grade TypeScript solution, and analyzes the performance trade-offs.
+
+---
+
+## The Problem Statement
+
+You need to build an asynchronous task runner that manages a queue of promises according to three key requirements:
+
+1. **Concurrency Control ($N$):** Only $N$ tasks should run simultaneously. When a task completes, the next queued task must start automatically.
+2. **Robust Error Handling:** A single failing task must not crash the queue or stop other tasks. An error callback must catch and report failures individually.
+3. **Priority Scheduling:** Higher priority tasks should run before lower priority tasks already in the queue, regardless of when they were added.
+
+---
+
+## Step-by-Step Implementation
+
+### Step 1: Concurrency Control
+
+To implement concurrency, we need to track how many tasks are currently running (`runningCount`) and keep a buffer of pending tasks. When a new task is added, we check if we are below the concurrency limit $N$. If so, we execute it immediately; otherwise, it waits in our queue.
+
+### Step 2: Isolated Error Handling
+
+To make the queue resilient, each task execution must be wrapped in a `try...catch` block. If a task fails, we catch the error, report it via our `onError` callback, reject that specific task's promise, and trigger the next task in the `finally` block to keep the runner moving.
+
+### Step 3: Priority Queueing
+
+Instead of a simple FIFO (First-In, First-Out) queue, we want a priority queue. Each task is registered with a `priority` number (higher numbers denote higher priority). When dequeuing a task, we always pull the one with the highest priority.
+
+---
+
+## The Complete Solution
+
+Here is a fully typed TypeScript implementation:
+
+```typescript
+type Task<T = any> = () => Promise<T>;
+
+interface QueueItem<T = any> {
+  task: Task<T>;
+  priority: number;
+  resolve: (value: T | PromiseLike<T>) => void;
+  reject: (reason?: any) => void;
+}
+
+export class AsyncTaskRunner {
+  private concurrency: number;
+  private queue: QueueItem[] = [];
+  private runningCount = 0;
+  private onErrorCallback?: (error: any) => void;
+
+  constructor(concurrency: number, onError?: (error: any) => void) {
+    this.concurrency = concurrency;
+    this.onErrorCallback = onError;
+  }
+
+  /**
+   * Enqueues a task and returns a Promise that resolves or rejects
+   * when the task eventually finishes executing.
+   */
+  public add<T>(task: Task<T>, priority = 0): Promise<T> {
+    return new Promise<T>((resolve, reject) => {
+      const item: QueueItem<T> = { task, priority, resolve, reject };
+      
+      // Insert item based on binary search to maintain sorted order in O(log M)
+      this.enqueue(item);
+      
+      // Attempt to dispatch
+      this.dispatch();
+    });
+  }
+
+  /**
+   * Inserts a task into the queue maintaining descending priority order.
+   * Time Complexity: O(M) due to array shifting during splice.
+   */
+  private enqueue(item: QueueItem): void {
+    let low = 0;
+    let high = this.queue.length;
+
+    while (low < high) {
+      const mid = (low + high) >> 1;
+      if (this.queue[mid].priority >= item.priority) {
+        low = mid + 1;
+      } else {
+        high = mid;
+      }
+    }
+    this.queue.splice(low, 0, item);
+  }
+
+  /**
+   * Dispatches tasks from the queue while concurrency headroom permits.
+   */
+  private async dispatch(): Promise<void> {
+    if (this.runningCount >= this.concurrency || this.queue.length === 0) {
+      return;
+    }
+
+    this.runningCount++;
+    const { task, resolve, reject } = this.queue.shift()!;
+
+    try {
+      const result = await task();
+      resolve(result);
+    } catch (err) {
+      if (this.onErrorCallback) {
+        try {
+          this.onErrorCallback(err);
+        } catch (callbackErr) {
+          console.error("Error inside onError callback:", callbackErr);
+        }
+      }
+      reject(err);
+    } finally {
+      this.runningCount--;
+      this.dispatch(); // Trigger next queue dispatch
+    }
+  }
+}
+```
+
+---
+
+## In-Depth Optimization & Trade-Offs
+
+### 1. Queue Insertion Performance
+In the solution above, we use a binary search to find the insertion index, which takes $O(\log M)$ time where $M$ is the queue length. However, inserting the item into the array using `Array.prototype.splice` takes $O(M)$ time in the worst case because JavaScript must shift subsequent array elements in memory.
+
+For an interview, this is highly efficient. However, if the queue scales to millions of tasks, we can optimize this to $O(\log M)$ operations for both insertion and extraction by implementing a binary heap (Max-Heap) as our backing data structure.
+
+### 2. Error Propagation vs. Queue Flow
+Notice that in the `catch` block, we call `reject(err)`. This correctly propagates the error back to the caller of `runner.add(task)`, allowing them to handle the failure locally:
+
+```javascript
+runner.add(fetchUserData, 10)
+  .then(data => console.log(data))
+  .catch(err => console.error("Specific task failed:", err));
+```
+
+Because the `finally` block executes *after* the resolution or rejection, the runner moves on to the next item immediately, securing the flow of the entire application.

@@ -1,5 +1,5 @@
 import { Icons } from "@/components/icons";
-import { FolderKey, HomeIcon } from "lucide-react";
+import { FolderKey, HomeIcon, BookOpen } from "lucide-react";
 
 export const DATA = {
   name: "Victor Adeshina",
@@ -24,7 +24,7 @@ I thrive in fast-paced environments, speak fluent **TypeScript, React, Node.js, 
 * **Revenue-Driven Engineering:** Focused on the bottom line whether that means improving conversion flows or optimizing backend throughput with Go.
 * **Sleek UI/UX Obsessed:** I build for the user. I specialize in upgrading dated applications into premium, ultra-modern interfaces inspired by clean Apple and Shadcn design standards.
 * **Cross-Platform Versatility:** Seamlessly jumping between robust server-side API architecture and high-performance mobile apps without missing a beat.`,
-  avatarUrl: "/victor.jpg",
+  avatarUrl: "/victor_mono.png",
   skills: [
     "React",
     "React Native",
@@ -43,6 +43,7 @@ I thrive in fast-paced environments, speak fluent **TypeScript, React, Node.js, 
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
+    { href: "/blog", icon: BookOpen, label: "Blog" },
     { href: "/resume_2026.pdf", icon: FolderKey, label: "Resume" },
   ],
   contact: {
@@ -88,7 +89,7 @@ I thrive in fast-paced environments, speak fluent **TypeScript, React, Node.js, 
       href: "#",
       location: "Remote",
       title: "Software Engineer",
-      logoUrl: "/victor.jpg",
+      logoUrl: "/victor_mono.png",
       start: "January 2023",
       end: "May 2025",
       description:
@@ -205,6 +206,38 @@ I thrive in fast-paced environments, speak fluent **TypeScript, React, Node.js, 
           title: "LinkedIn post",
           href: "https://www.linkedin.com/feed/update/urn:li:activity:7407708515307274240?updateEntityUrn=urn%3Ali%3Afs_updateV2%3A%28urn%3Ali%3Aactivity%3A7407708515307274240%2CFEED_DETAIL%2CEMPTY%2CDEFAULT%2Cfalse%29",
           icon: <Icons.linkedin className="size-3" />,
+        },
+      ],
+    },
+  ],
+  certifications: [
+    {
+      title: "Go (Golang) Masterclass: Learn Like a Google Engineer",
+      issuer: "Udemy",
+      dates: "Issued January 2026",
+      description:
+        "Comprehensive mastery of the Go programming language, covering advanced concurrency patterns, performance profiling, scalable API design, and Go's runtime internals.",
+      image: "udemy",
+      links: [
+        {
+          title: "Credential",
+          href: "https://www.udemy.com",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+    },
+    {
+      title: "Microsoft Certified: Azure Developer Associate",
+      issuer: "Microsoft",
+      dates: "Issued March 2026",
+      description:
+        "Validation of professional skills in designing, building, testing, and maintaining secure cloud applications and services on the Microsoft Azure platform.",
+      image: "microsoft",
+      links: [
+        {
+          title: "Credential",
+          href: "https://learn.microsoft.com/credentials/certifications/azure-developer/",
+          icon: <Icons.globe className="size-3" />,
         },
       ],
     },

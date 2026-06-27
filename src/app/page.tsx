@@ -1,4 +1,5 @@
 import { AwardCard } from "@/components/award-card";
+import { CertificationCard } from "@/components/certification-card";
 import BentoGrid from "@/components/bento-grid";
 import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
@@ -167,19 +168,59 @@ export default function Page() {
         <BentoGrid />
       </BlurFade>
 
+      <section id="projects" className="space-y-8 py-4 sm:py-8">
+        <BlurFade delay={BLUR_FADE_DELAY * 6}>
+          <div className="flex flex-col items-start gap-4">
+            <div className="space-y-2">
+              <Badge className="rounded-full px-3 py-1">Featured work</Badge>
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                Case studies that show the craft behind the code
+              </h2>
+              <p className="max-w-2xl text-muted-foreground">
+                A few projects that show how I think about product quality, scalability, and polished execution.
+              </p>
+            </div>
+          </div>
+        </BlurFade>
+
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-5">
+          {DATA.projects.map((project, id) => (
+            <div
+              key={project.title}
+              className={id === 0 ? "md:col-span-3" : "md:col-span-2"}
+            >
+              <BlurFade delay={BLUR_FADE_DELAY * 7 + id * 0.05}>
+                <ProjectCard
+                  href={project.href}
+                  title={project.title}
+                  description={project.description}
+                  dates={project.dates}
+                  tags={project.technologies}
+                  highlights={project.highlights}
+                  featured={project.featured}
+                  image={project.image}
+                  video={project.video}
+                  links={project.links}
+                />
+              </BlurFade>
+            </div>
+          ))}
+        </div>
+      </section>
+
       <section id="about" className="grid gap-6 lg:grid-cols-[minmax(0,1.15fr)_minmax(280px,0.85fr)]">
         <div className="space-y-3">
-          <BlurFade delay={BLUR_FADE_DELAY * 6}>
+          <BlurFade delay={BLUR_FADE_DELAY * 8}>
             <h2 className="text-xl font-bold">About</h2>
           </BlurFade>
-          <BlurFade delay={BLUR_FADE_DELAY * 7}>
+          <BlurFade delay={BLUR_FADE_DELAY * 9}>
             <Markdown className="prose max-w-none text-pretty font-sans text-sm text-muted-foreground dark:prose-invert">
               {DATA.summary}
             </Markdown>
           </BlurFade>
         </div>
 
-        <BlurFade delay={BLUR_FADE_DELAY * 7}>
+        <BlurFade delay={BLUR_FADE_DELAY * 9}>
           <div className="rounded-2xl border bg-card p-6 shadow-sm">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground">
               What I optimize for
@@ -212,12 +253,12 @@ export default function Page() {
 
       <section id="work" className="grid gap-6 lg:grid-cols-[minmax(0,1.15fr)_minmax(280px,0.85fr)]">
         <div className="space-y-3">
-          <BlurFade delay={BLUR_FADE_DELAY * 8}>
+          <BlurFade delay={BLUR_FADE_DELAY * 10}>
             <h2 className="text-xl font-bold">Work Experience</h2>
           </BlurFade>
           <div className="flex min-h-0 flex-col gap-y-3">
             {DATA.work.map((work, id) => (
-              <BlurFade key={work.company} delay={BLUR_FADE_DELAY * 9 + id * 0.05}>
+              <BlurFade key={work.company} delay={BLUR_FADE_DELAY * 11 + id * 0.05}>
                 <ResumeCard
                   logoUrl={work.logoUrl}
                   altText={work.company}
@@ -234,12 +275,12 @@ export default function Page() {
         </div>
 
         <div className="space-y-3">
-          <BlurFade delay={BLUR_FADE_DELAY * 8}>
+          <BlurFade delay={BLUR_FADE_DELAY * 10}>
             <h2 className="text-xl font-bold">Education</h2>
           </BlurFade>
           <div className="flex min-h-0 flex-col gap-y-3">
             {DATA.education.map((education, id) => (
-              <BlurFade key={education.school} delay={BLUR_FADE_DELAY * 9 + id * 0.05}>
+              <BlurFade key={education.school} delay={BLUR_FADE_DELAY * 11 + id * 0.05}>
                 <ResumeCard
                   href={education.href}
                   logoUrl={education.logoUrl}
@@ -256,17 +297,17 @@ export default function Page() {
 
       <section id="skills">
         <div className="flex min-h-0 flex-col gap-y-3">
-          <BlurFade delay={BLUR_FADE_DELAY * 10}>
+          <BlurFade delay={BLUR_FADE_DELAY * 12}>
             <h2 className="text-xl font-bold">Skills</h2>
           </BlurFade>
-          <BlurFade delay={BLUR_FADE_DELAY * 11}>
+          <BlurFade delay={BLUR_FADE_DELAY * 13}>
             <p className="max-w-2xl text-sm text-muted-foreground">
               A practical stack for building modern product experiences, from interface work to backend services.
             </p>
           </BlurFade>
           <div className="flex flex-wrap gap-1.5">
             {DATA.skills.map((skill, id) => (
-              <BlurFade key={skill} delay={BLUR_FADE_DELAY * 12 + id * 0.03}>
+              <BlurFade key={skill} delay={BLUR_FADE_DELAY * 14 + id * 0.03}>
                 <Badge key={skill} variant="secondary" className="rounded-full px-3 py-1">
                   {skill}
                 </Badge>
@@ -276,48 +317,40 @@ export default function Page() {
         </div>
       </section>
 
-      <section id="projects" className="space-y-8 py-4 sm:py-8">
-        <BlurFade delay={BLUR_FADE_DELAY * 13}>
-          <div className="flex flex-col items-start gap-4">
-            <div className="space-y-2">
-              <Badge className="rounded-full px-3 py-1">Featured work</Badge>
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                Case studies that show the craft behind the code
-              </h2>
-              <p className="max-w-2xl text-muted-foreground">
-                A few projects that show how I think about product quality, scalability, and polished execution.
-              </p>
-            </div>
+      <section id="certifications" className="space-y-8 py-4 sm:py-8">
+        <BlurFade delay={BLUR_FADE_DELAY * 15}>
+          <div className="space-y-3">
+            <Badge className="rounded-full px-3 py-1">Certifications</Badge>
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+              Professional credentials
+            </h2>
+            <p className="max-w-2xl text-muted-foreground">
+              Verifications of technical expertise and specialized industry training.
+            </p>
           </div>
         </BlurFade>
 
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-5">
-          {DATA.projects.map((project, id) => (
-            <div
-              key={project.title}
-              className={id === 0 ? "md:col-span-3" : "md:col-span-2"}
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+          {DATA.certifications.map((cert, id) => (
+            <BlurFade
+              key={cert.title}
+              delay={BLUR_FADE_DELAY * 16 + id * 0.05}
             >
-              <BlurFade delay={BLUR_FADE_DELAY * 14 + id * 0.05}>
-                <ProjectCard
-                  href={project.href}
-                  title={project.title}
-                  description={project.description}
-                  dates={project.dates}
-                  tags={project.technologies}
-                  highlights={project.highlights}
-                  featured={project.featured}
-                  image={project.image}
-                  video={project.video}
-                  links={project.links}
-                />
-              </BlurFade>
-            </div>
+              <CertificationCard
+                title={cert.title}
+                issuer={cert.issuer}
+                dates={cert.dates}
+                description={cert.description}
+                image={cert.image}
+                links={cert.links}
+              />
+            </BlurFade>
           ))}
         </div>
       </section>
 
       <section id="awards" className="space-y-8 py-4 sm:py-8">
-        <BlurFade delay={BLUR_FADE_DELAY * 15}>
+        <BlurFade delay={BLUR_FADE_DELAY * 17}>
           <div className="space-y-3">
             <div className="flex items-center gap-3">
               <Image src={trophyIcon} alt="Trophy" className="size-12 object-contain" />
@@ -332,12 +365,12 @@ export default function Page() {
           </div>
         </BlurFade>
 
-        <BlurFade delay={BLUR_FADE_DELAY * 16}>
+        <BlurFade delay={BLUR_FADE_DELAY * 18}>
           <ul className="mb-4 ml-4 divide-y divide-dashed border-l">
             {DATA.awards.map((award, id) => (
               <BlurFade
                 key={award.title + award.dates}
-                delay={BLUR_FADE_DELAY * 17 + id * 0.05}
+                delay={BLUR_FADE_DELAY * 19 + id * 0.05}
               >
                 <AwardCard
                   title={award.title}
@@ -354,7 +387,7 @@ export default function Page() {
       </section>
 
       <section id="writing" className="rounded-3xl border bg-card p-6 shadow-sm sm:p-8">
-        <BlurFade delay={BLUR_FADE_DELAY * 18}>
+        <BlurFade delay={BLUR_FADE_DELAY * 20}>
           <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
             <div className="max-w-2xl space-y-3">
               <Badge variant="secondary" className="rounded-full px-3 py-1">
@@ -378,7 +411,7 @@ export default function Page() {
       </section>
 
       <section id="contact" className="grid gap-4 rounded-3xl border bg-card px-6 py-10 text-center shadow-sm sm:px-8 sm:py-12">
-        <BlurFade delay={BLUR_FADE_DELAY * 19}>
+        <BlurFade delay={BLUR_FADE_DELAY * 21}>
           <div className="space-y-4">
             <Badge className="rounded-full px-3 py-1">Contact</Badge>
             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
