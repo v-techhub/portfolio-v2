@@ -333,3 +333,16 @@
     animation: none;
   }
 }
+
+/* Editorial loader overrides */
+.panel { background: hsl(var(--background)); }
+.panel::before { top: 50%; height: 1px; background: hsl(var(--border)); opacity: .6; }
+.panel::after, .band { display: none; }
+.content { width: min(520px, calc(100vw - 48px)); align-items: flex-start; text-align: left; }
+.wordmark { align-items: baseline; gap: 16px; }
+.wordmarkIndex { font-size: 11px; letter-spacing: .08em; color: hsl(var(--muted-foreground)); }
+.wordmarkPrimary { font-family: var(--font-heading), ui-sans-serif, system-ui, sans-serif; font-size: clamp(2rem,5vw,3.5rem); font-weight: 600; letter-spacing: -.06em; line-height: 1; }
+.tagline { margin: 18px 0 0 27px; font-size: 12px; letter-spacing: normal; color: hsl(var(--muted-foreground)); text-transform: none; }
+.barTrack { width: 100%; height: 1px; margin-top: 52px; background: hsl(var(--border)); }
+.barFill { background: hsl(var(--foreground)); box-shadow: none; }
+@keyframes panel-wipe { from { transform: translateY(0); } to { transform: translateY(-102%); } }

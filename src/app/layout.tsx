@@ -6,18 +6,17 @@ import LenisProvider from "@/components/lenis-provider";
 import { DATA } from "@/data/resume";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
-import { Quicksand } from "next/font/google";
-import localFont from "next/font/local";
+import { Bricolage_Grotesque, Instrument_Sans } from "next/font/google";
 import "./globals.css";
 
-const fontSans = Quicksand({
+const fontSans = Instrument_Sans({
   subsets: ["latin"],
   variable: "--font-sans",
 });
 
-const clashDisplay = localFont({
-  src: "../assets/fonts/ClashDisplay-Bold.otf",
-  variable: "--font-clash-display",
+const bricolageGrotesque = Bricolage_Grotesque({
+  subsets: ["latin"],
+  variable: "--font-heading",
 });
 
 export const metadata: Metadata = {
@@ -65,9 +64,9 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body
         className={cn(
-          "min-h-screen bg-background font-sans antialiased max-w-5xl mx-auto py-8 sm:py-16 px-6",
+          "min-h-screen bg-background font-sans antialiased max-w-6xl mx-auto py-6 sm:py-8 px-6",
           fontSans.variable,
-          clashDisplay.variable,
+          bricolageGrotesque.variable,
         )}
       >
         <ThemeProvider attribute="class" defaultTheme="light">

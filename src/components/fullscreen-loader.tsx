@@ -1,11 +1,10 @@
 "use client";
 
-import Image from "next/image";
 import { useEffect, useState } from "react";
 import styles from "./fullscreen-loader.module.css";
 
-const WIPE_MS = 1400;
-const DONE_MS = 3200;
+const WIPE_MS = 1100;
+const DONE_MS = 2200;
 
 export default function FullscreenLoader() {
   const [phase, setPhase] = useState<"enter" | "wipe" | "done">("enter");
@@ -41,38 +40,14 @@ export default function FullscreenLoader() {
       aria-live="polite"
       aria-label="Loading Victor Adeshina portfolio"
     >
-      <div className={`${styles.band} ${styles.band5} ${wiping ? styles.band5Wipe : ""}`} />
-      <div className={`${styles.band} ${styles.band4} ${wiping ? styles.band4Wipe : ""}`} />
-      <div className={`${styles.band} ${styles.band3} ${wiping ? styles.band3Wipe : ""}`} />
-      <div className={`${styles.band} ${styles.band2} ${wiping ? styles.band2Wipe : ""}`} />
-      <div className={`${styles.band} ${styles.band1} ${wiping ? styles.band1Wipe : ""}`} />
-
       <div className={`${styles.panel} ${wiping ? styles.panelWipe : ""}`}>
         <div className={`${styles.content} ${wiping ? styles.contentOut : ""}`}>
-          <div className={styles.logoWrap}>
-            <div className={styles.ringOuter} />
-            <div className={styles.ring} />
-            <Image
-              src="/victor_mono.png"
-              alt="Victor Adeshina"
-              width={72}
-              height={72}
-              priority
-              className={styles.logoImage}
-            />
-          </div>
-
           <div className={styles.wordmark}>
-            <span className={styles.statusPill}>
-              <span className={styles.statusDot} />
-              Loading portfolio
-            </span>
+            <span className={styles.wordmarkIndex}>VA / 2026</span>
             <span className={styles.wordmarkPrimary}>Victor Adeshina</span>
-            <div className={styles.wordmarkDivider} />
-            <span className={styles.wordmarkSecondary}>Full-stack engineer</span>
           </div>
 
-          <p className={styles.tagline}>Building premium digital experiences</p>
+          <p className={styles.tagline}>Selected work &amp; digital experiences</p>
 
           <div className={styles.barTrack}>
             <div className={styles.barFill} />
