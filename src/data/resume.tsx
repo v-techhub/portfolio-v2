@@ -114,11 +114,11 @@ I thrive in fast-paced environments, speak fluent **TypeScript, React, Node.js, 
       href: "https://fluxio-admin.vercel.app",
       dates: "Feb 2025 - Till Date",
       description:
-        "A modern e-commerce admin dashboard crafted to showcase my frontend development skills through polished UI design, reusable architecture, responsive layouts, analytics visualizations, and smooth user interactions. Fluxio focuses on creating a production-level admin experience using React, TypeScript, and scalable component patterns. Additional screens and features are actively being developed.",
+        "An e-commerce operations workspace designed to make business performance easier to understand and everyday admin work easier to manage. Fluxio combines scan-friendly analytics, focused workflows, and consistent interaction patterns in a responsive interface that helps merchants move from insight to action without a cluttered back office.",
       highlights: [
-        "Production-grade admin UI",
-        "Reusable component architecture",
-        "Analytics-focused workflows",
+        "Clear commerce performance overview",
+        "Focused operational workflows",
+        "Responsive, consistent interface",
       ],
       technologies: [
         "React",
@@ -156,11 +156,11 @@ I thrive in fast-paced environments, speak fluent **TypeScript, React, Node.js, 
       href: "https://smartflow-backend-fb4b.onrender.com",
       dates: "August 2025 - Till Date",
       description:
-        "SmartFlow is a modern, intelligent project management application designed to solve real-world collaboration challenges in software development teams. Built with the MERN stack and enhanced with AI capabilities, it bridges the gap between project planning and actual development work through seamless GitHub integration and real-time collaboration features.",
+        "A collaborative workspace that connects software planning with the work happening in development. SmartFlow helps teams turn ideas into structured tasks, coordinate in real time, and connect GitHub activity to the work it affects, while AI supports planning without taking decisions away from the team.",
       highlights: [
-        "AI-assisted project planning",
-        "Real-time collaboration",
-        "GitHub-integrated workflows",
+        "Planning connected to GitHub delivery",
+        "Live team collaboration",
+        "Human-guided AI assistance",
       ],
       technologies: [
         "React.JS",
@@ -199,11 +199,11 @@ I thrive in fast-paced environments, speak fluent **TypeScript, React, Node.js, 
       href: "https://health-website-tan-gamma.vercel.app/",
       dates: "2026",
       description:
-        "A polished healthcare landing page for a modern dental practice, designed to make essential services, emergency care, and the patient experience feel clear and approachable. The visual direction combines confident typography, expressive imagery, and responsive interactions to create a memorable clinic brand.",
+        "A patient-first website that makes dental care feel easier to understand and less intimidating. It helps visitors quickly explore treatments, recognise urgent-care options, and choose a clear next step through approachable language, confident visual direction, and responsive interactions.",
       highlights: [
-        "Modern dental practice landing page",
-        "Clear service and emergency-care pathways",
-        "Responsive, image-led visual design",
+        "Approachable treatment discovery",
+        "Visible emergency-care pathways",
+        "Responsive, patient-focused experience",
       ],
       technologies: [
         "Healthcare UX",

@@ -1,0 +1,59 @@
+.visible {
+  animation: scroll-control-enter 680ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.visible::after {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  z-index: -1;
+  border: 1px solid hsl(var(--foreground) / 0.3);
+  border-radius: inherit;
+  pointer-events: none;
+  animation: scroll-control-ring 900ms ease-out 260ms both;
+}
+
+@keyframes scroll-control-enter {
+  0% {
+    opacity: 0;
+    transform: translateY(18px) scale(0.72);
+  }
+  58% {
+    opacity: 1;
+    transform: translateY(-4px) scale(1.08);
+  }
+  78% {
+    transform: translateY(1px) scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes scroll-control-ring {
+  0% {
+    opacity: 0.55;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.65);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .visible {
+    animation: scroll-control-fade 180ms ease-out;
+  }
+
+  .visible::after {
+    animation: none;
+    opacity: 0;
+  }
+}
+
+@keyframes scroll-control-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

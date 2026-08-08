@@ -1,5 +1,6 @@
 import Navbar from "@/components/navbar";
 import { ModeToggle } from "@/components/mode-toggle";
+import ScrollControls from "@/components/scroll-controls";
 import FullscreenLoader from "@/components/fullscreen-loader";
 import { ThemeProvider } from "@/components/theme-provider";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -80,6 +81,7 @@ export default function RootLayout({
               <FullscreenLoader />
               <ModeToggle />
               {children}
+              <ScrollControls />
               <Navbar />
             </LenisProvider>
           </TooltipProvider>
