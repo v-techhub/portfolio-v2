@@ -43,11 +43,8 @@ export default function FullscreenLoader() {
       <div className={`${styles.panel} ${wiping ? styles.panelWipe : ""}`}>
         <div className={`${styles.content} ${wiping ? styles.contentOut : ""}`}>
           <div className={styles.wordmark}>
-            <span className={styles.wordmarkIndex}>VA / 2026</span>
             <span className={styles.wordmarkPrimary}>Victor Adeshina</span>
           </div>
-
-          <p className={styles.tagline}>Selected work &amp; digital experiences</p>
 
           <div className={styles.barTrack}>
             <div className={styles.barFill} />

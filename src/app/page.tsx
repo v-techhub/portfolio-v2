@@ -1,14 +1,10 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import HorizontalProjects from "@/components/horizontal-projects";
 import { DATA } from "@/data/resume";
 import { ArrowUpRight, Download, Mail } from "lucide-react";
-import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
-
-const WavingHand = dynamic(() => import("@/components/waving-hand"), {
-  ssr: false,
-});
 
 function ProjectVisual({
   title,
@@ -48,26 +44,24 @@ export default function Page() {
     <main>
       <section
         id="top"
-        className="flex min-h-[calc(100svh-5rem)] flex-col justify-center py-20 sm:py-28"
+        className="relative left-1/2 isolate flex min-h-svh w-screen -translate-x-1/2 flex-col overflow-hidden bg-background text-foreground"
       >
-        <div className="max-w-4xl">
+        <div className="relative z-20 mx-auto flex w-full max-w-6xl flex-1 items-center px-6 py-20 sm:py-28">
+          <div className="w-full lg:w-[62%]">
           <p className="mb-8 flex items-center gap-2 text-sm font-medium text-muted-foreground">
             <span className="inline-block size-2 rounded-full bg-emerald-500" />
             Available for remote opportunities
           </p>
-          <h1 className="max-w-4xl text-[clamp(3.5rem,9vw,8.5rem)] font-semibold leading-[.88] tracking-[-.07em]">
+          <h1 className="max-w-4xl text-[clamp(3.5rem,7.5vw,7.5rem)] font-semibold leading-[.88] tracking-[-.07em]">
             Building products that people enjoy using.
           </h1>
-          <div className="mt-10 flex flex-col gap-8 sm:flex-row sm:items-end sm:justify-between">
+          <div className="mt-10">
             <p className="max-w-md text-lg leading-relaxed text-muted-foreground sm:text-xl">
               I&apos;m {DATA.name.split(" ")[0]}, a full-stack engineer turning
               complex business problems into fast, thoughtful digital
               experiences.
-              <span className="ml-1 inline-flex align-middle">
-                <WavingHand />
-              </span>
             </p>
-            <div className="flex shrink-0 gap-3">
+            <div className="mt-8 flex flex-wrap gap-3">
               <Button asChild size="lg" className="rounded-full px-5">
                 <Link href="#projects">
                   Selected work <ArrowUpRight className="ml-2 size-4" />
@@ -85,6 +79,19 @@ export default function Page() {
               </Button>
             </div>
           </div>
+          </div>
+
+        </div>
+
+        <div className="relative z-10 -mt-8 ml-auto h-[52svh] w-[96vw] shrink-0 md:h-[60svh] md:w-[76vw] lg:absolute lg:-bottom-[5%] lg:-right-[6vw] lg:mt-0 lg:h-[101%] lg:w-[clamp(560px,50vw,880px)]">
+          <Image
+            src="/me-mono.jpg"
+            alt="Victor Adeshina"
+            fill
+            priority
+            sizes="(max-width: 767px) 96vw, (max-width: 1023px) 76vw, 50vw"
+            className="object-contain object-bottom-right grayscale mix-blend-multiply dark:mix-blend-lighten [mask-image:linear-gradient(to_right,transparent_0%,black_42%,black_100%)] [-webkit-mask-image:linear-gradient(to_right,transparent_0%,black_42%,black_100%)]"
+          />
         </div>
       </section>
 
@@ -97,9 +104,12 @@ export default function Page() {
             01 — {String(DATA.projects.length).padStart(2, "0")}
           </span>
         </div>
-        <div className="space-y-24 sm:space-y-36">
+        <HorizontalProjects>
           {DATA.projects.map((project, index) => (
-            <article key={project.title} className="group">
+            <article
+              key={project.title}
+              className="group w-[calc(100vw-3rem)] max-w-[58rem] shrink-0 sm:w-[82vw]"
+            >
               <Link
                 href={project.href}
                 target="_blank"
@@ -144,7 +154,7 @@ export default function Page() {
               </div>
             </article>
           ))}
-        </div>
+        </HorizontalProjects>
       </section>
 
       <section id="about" className="scroll-mt-24 border-t py-20 sm:py-28">

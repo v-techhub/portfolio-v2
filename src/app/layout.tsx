@@ -1,4 +1,5 @@
 import Navbar from "@/components/navbar";
+import { ModeToggle } from "@/components/mode-toggle";
 import FullscreenLoader from "@/components/fullscreen-loader";
 import { ThemeProvider } from "@/components/theme-provider";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -64,15 +65,20 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body
         className={cn(
-          "min-h-screen bg-background font-sans antialiased max-w-6xl mx-auto py-6 sm:py-8 px-6",
+          "min-h-screen max-w-6xl mx-auto overflow-x-clip bg-background px-6 font-sans antialiased",
           fontSans.variable,
           bricolageGrotesque.variable,
         )}
       >
-        <ThemeProvider attribute="class" defaultTheme="light">
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+        >
           <TooltipProvider delayDuration={0}>
             <LenisProvider>
               <FullscreenLoader />
+              <ModeToggle />
               {children}
               <Navbar />
             </LenisProvider>

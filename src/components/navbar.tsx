@@ -1,4 +1,3 @@
-import { ModeToggle } from "@/components/mode-toggle";
 import { DATA } from "@/data/resume";
 import Link from "next/link";
 
@@ -41,7 +40,7 @@ export default function Navbar() {
             Blog
           </Link>
         </div>
-        <div className="flex items-center gap-3">
+        <div className="flex items-center">
           <Link
             href={DATA.contact.social.LinkedIn.url}
             target="_blank"
@@ -50,7 +49,6 @@ export default function Navbar() {
           >
             LinkedIn
           </Link>
-          <ModeToggle />
         </div>
       </nav>
     </header>
