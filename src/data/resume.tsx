@@ -110,6 +110,37 @@ I thrive in fast-paced environments, speak fluent **TypeScript, React, Node.js, 
     {
       active: true,
       featured: true,
+      title: "Along",
+      href: "https://github.com/v-techhub/Along",
+      ctaLabel: "View source",
+      dates: "August 2026 - Present",
+      description:
+        "An in-progress collaborative trip workspace designed to replace scattered chats, spreadsheets, map links, and payment messages with one reliable place to plan together. Along brings destination decisions, shared itineraries, expense tracking, and realtime updates into a responsive, offline-ready experience for desktop and mobile.",
+      highlights: [
+        "Shared destination decisions",
+        "Collaborative itineraries and expenses",
+        "Realtime, offline-ready experience",
+      ],
+      technologies: [
+        "Product Design",
+        "Realtime Collaboration",
+        "Offline-first PWA",
+        "Responsive UX",
+        "Expense Splitting",
+      ],
+      links: [
+        {
+          type: "Source Code",
+          href: "https://github.com/v-techhub/Along",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "/along.png",
+      video: undefined,
+    },
+    {
+      active: true,
+      featured: true,
       title: "Fluxio Admin Dashboard",
       href: "https://fluxio-admin.vercel.app",
       dates: "Feb 2025 - Till Date",

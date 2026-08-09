@@ -148,7 +148,7 @@ export default function Page() {
                   </div>
                 </div>
                 <span className="inline-flex items-center gap-2 text-sm font-medium sm:pt-2">
-                  View project{" "}
+                  {"ctaLabel" in project ? project.ctaLabel : "View project"}{" "}
                   <ArrowUpRight className="size-4 transition-transform group-hover:-translate-y-1 group-hover:translate-x-1" />
                 </span>
               </div>
