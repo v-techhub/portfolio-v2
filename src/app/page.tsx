@@ -48,39 +48,42 @@ export default function Page() {
       >
         <div className="relative z-20 mx-auto flex w-full max-w-6xl flex-1 items-center px-6 py-20 sm:py-28">
           <div className="w-full lg:w-[62%]">
-          <p className="mb-8 flex items-center gap-2 text-sm font-medium text-muted-foreground">
-            <span className="inline-block size-2 rounded-full bg-emerald-500" />
-            Available for remote opportunities
-          </p>
-          <h1 className="max-w-4xl text-[clamp(3.5rem,7.5vw,7.5rem)] font-semibold leading-[.88] tracking-[-.07em]">
-            Building products that people enjoy using.
-          </h1>
-          <div className="mt-10">
-            <p className="max-w-md text-lg leading-relaxed text-muted-foreground sm:text-xl">
-              I&apos;m {DATA.name.split(" ")[0]}, a full-stack engineer turning
-              complex business problems into fast, thoughtful digital
-              experiences.
+            <p className="mb-8 flex items-center gap-2 text-sm font-medium text-muted-foreground">
+              <span className="inline-block size-2 rounded-full bg-emerald-500" />
+              Available for remote opportunities
             </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Button asChild size="lg" className="rounded-full px-5">
-                <Link href="#projects">
-                  Selected work <ArrowUpRight className="ml-2 size-4" />
-                </Link>
-              </Button>
-              <Button
-                asChild
-                size="lg"
-                variant="outline"
-                className="rounded-full px-5"
-              >
-                <Link href="/resume_2026.pdf" target="_blank" rel="noreferrer">
-                  Résumé <Download className="ml-2 size-4" />
-                </Link>
-              </Button>
+            <h1 className="max-w-4xl text-[clamp(3.5rem,7.5vw,7.5rem)] font-semibold leading-[.88] tracking-[-.07em]">
+              Building products that people enjoy using.
+            </h1>
+            <div className="mt-10">
+              <p className="max-w-md text-lg leading-relaxed text-muted-foreground sm:text-xl">
+                I&apos;m {DATA.name.split(" ")[0]}, a full-stack engineer
+                turning complex business problems into fast, thoughtful digital
+                experiences.
+              </p>
+              <div className="mt-8 flex flex-wrap gap-3">
+                <Button asChild size="lg" className="rounded-full px-5">
+                  <Link href="#projects">
+                    Selected work <ArrowUpRight className="ml-2 size-4" />
+                  </Link>
+                </Button>
+                <Button
+                  asChild
+                  size="lg"
+                  variant="outline"
+                  className="rounded-full px-5"
+                >
+                  <Link
+                    href="/resume_2026.pdf"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Résumé <Download className="ml-2 size-4" />
+                  </Link>
+                </Button>
+              </div>
             </div>
           </div>
-          </div>
-
         </div>
 
         <div className="relative z-10 -mt-8 ml-auto h-[52svh] w-[96vw] shrink-0 md:h-[60svh] md:w-[76vw] lg:absolute lg:-bottom-[5%] lg:-right-[6vw] lg:mt-0 lg:h-[101%] lg:w-[clamp(560px,50vw,880px)]">
@@ -174,7 +177,7 @@ export default function Page() {
               products.
             </p>
             <div className="flex flex-wrap gap-2">
-              {DATA.skills.slice(0, 10).map((skill) => (
+              {DATA.skills.map((skill) => (
                 <Badge
                   key={skill}
                   variant="secondary"
