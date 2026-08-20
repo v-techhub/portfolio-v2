@@ -8,7 +8,7 @@ const footerLinks = [
   { label: "Experience", href: "#experience" },
   { label: "Contact", href: "#contact" },
   { label: "Blog", href: "/blog" },
-  { label: "Résumé", href: "/resume_2026.pdf", external: true },
+  { label: "Résumé", href: "/victoradeshina_resume.pdf", external: true },
   { label: "GitHub", href: DATA.contact.social.GitHub.url, external: true },
   { label: "LinkedIn", href: DATA.contact.social.LinkedIn.url, external: true },
 ] as const;
@@ -56,7 +56,10 @@ export default function Footer() {
             <span className="pb-1 text-xs text-muted-foreground">01 — 08</span>
           </div>
 
-          <nav aria-label="Footer navigation" className="grid grid-cols-2 border-t border-border/70">
+          <nav
+            aria-label="Footer navigation"
+            className="grid grid-cols-2 border-t border-border/70"
+          >
             {footerLinks.map((link, index) => (
               <FooterLink
                 key={link.label}
@@ -83,9 +86,16 @@ export default function Footer() {
             Victor<span className="text-muted-foreground">.</span>
           </Link>
 
-          <nav aria-label="Footer navigation" className="flex items-center gap-5 text-muted-foreground">
+          <nav
+            aria-label="Footer navigation"
+            className="flex items-center gap-5 text-muted-foreground"
+          >
             {desktopSectionLinks.map((link) => (
-              <Link key={link.label} href={link.href} className="transition-colors hover:text-foreground">
+              <Link
+                key={link.label}
+                href={link.href}
+                className="transition-colors hover:text-foreground"
+              >
                 {link.label}
               </Link>
             ))}

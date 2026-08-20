@@ -74,7 +74,7 @@ export default function Page() {
                   className="rounded-full px-5"
                 >
                   <Link
-                    href="/resume_2026.pdf"
+                    href="/victoradeshina_resume.pdf"
                     target="_blank"
                     rel="noreferrer"
                   >

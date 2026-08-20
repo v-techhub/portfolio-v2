@@ -48,7 +48,7 @@ I thrive in fast-paced environments, speak fluent **TypeScript, React, Node.js, 
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
     { href: "/blog", icon: BookOpen, label: "Blog" },
-    { href: "/resume_2026.pdf", icon: FolderKey, label: "Resume" },
+    { href: "/victoradeshina_resume.pdf", icon: FolderKey, label: "Resume" },
   ],
   contact: {
     email: "victoradeshina922@gmail.com",
